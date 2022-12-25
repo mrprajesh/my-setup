@@ -31,7 +31,7 @@ printf "$(date +"%d-%b-%Y %T (%Z)"), $(cat /sys/class/power_supply/BAT0/status),
 
 
 ## if current battery level is more than threahhold
-if [ $CURRENT_LEVEL -ge $THRESHOLD ] # Discharging | Charging
+if [ $CURRENT_LEVEL -ge $THRESHOLD ] && [ $CURRENT_STATUS == "Charging" ] # Discharging | Charging
 then
   #~ LOUD
   #~ paplay /usr/share/sounds/LinuxMint/stereo/phone-incoming-call.ogg
