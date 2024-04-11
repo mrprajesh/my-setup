@@ -1,0 +1,3 @@
+clang-format -style="{BasedOnStyle: Google, IndentWidth: 2, TabWidth: 2, UseTab: Never, PointerAlignment: Left, ColumnLimit: 0}"
+clang-format -style="{BasedOnStyle: Google, TabWidth: 2, IndentWidth: 2, UseTab: Never, PointerAlignment: Left, AlignConsecutiveAssignments: true, AlignTrailingComments: true, BinPackParameters: false, AllowAllParametersOfDeclarationOnNextLine: false}"
+clang-format -style="{BasedOnStyle: Chromium, TabWidth: 2, IndentWidth: 2, UseTab: Never, PointerAlignment: Left, ColumnLimit: 0, AllowAllParametersOfDeclarationOnNextLine: false}"
