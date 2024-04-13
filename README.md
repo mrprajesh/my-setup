@@ -6,3 +6,6 @@ Contains snippets for geany, vimrc config, powerline config,etc
 
 ### cm script
 ![image](https://github.com/mrprajesh/my-setup/assets/259998/ac78fd24-5461-4c55-9703-8d0f56eb8838)
+
+### Geany snippets
+![Cinnamon-Apr-14-2024_04_34_45am](https://github.com/mrprajesh/my-setup/assets/259998/f2767021-9b3a-45f8-b807-1449fd8e25c5)
