@@ -78,12 +78,16 @@ fi
 # Extract the command after single line comment "//"
 cmd=$(echo "$first_line" | sed 's/.*\/\/\(.*\)/\1/' | xargs)
 
+
 # Extract *.out from the cmd.
-outfile_name_noext=$(echo $cmd | grep -o '\b[[:alnum:]_]*\(?=\.out\b\)')
+# outfile_name_noext=$(echo $cmd | grep -o '\b[[:alnum:]_]*\(?=\.out\b\)')
+outfile_name_noext=$(echo $cmd | awk '{match($0, /[[:alnum:]]+\.out/); print substr($0, RSTART, RLENGTH-4)}')
+# echo " ="$outfile_name_noext
 
 #if *.out NOT found. USE FILE.out and append the cmd
 if [ -z "$outfile_name_noext" ]; then
     outfile_name_noext="${filename%.*}"
+    # echo $cmd
     cmd=" $cmd -o $outfile_name_noext.out"
 fi
 
